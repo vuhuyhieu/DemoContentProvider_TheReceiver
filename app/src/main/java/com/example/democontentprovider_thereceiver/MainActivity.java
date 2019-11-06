@@ -19,15 +19,12 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<String> listStringStudent;
     private ArrayAdapter<String> adapterStudent;
     private ListView listViewStudent;
+
     static final String AUTHORITY = "com.example.demosqlite.MyProvider";
     static final String CONTENT_PATH = "backupdata";
     static final String URL = "content://"+AUTHORITY+"/"+CONTENT_PATH;
     static final Uri CONTENT_URI = Uri.parse(URL);
-
-    private static final int STUDENT = 1;
-    private static final int STUDENT_ID = 2;
     static final int uriCode = 1;
-
     static UriMatcher uriMatcher;
     static {
         uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
